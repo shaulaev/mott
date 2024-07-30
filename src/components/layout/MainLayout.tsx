@@ -24,7 +24,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, position = 'center', 
 
       {header && <Navbar />}
 
-      <main className={`flex flex-col flex-grow justify-${position}`}>{children}</main>
+      <main className={`flex flex-col flex-grow items-center justify-${position}`}>{children}</main>
 
       {footer && <Footer />}
     </div>

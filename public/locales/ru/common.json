@@ -1,8 +1,10 @@
 {
-    "welcome": "Добро пожаловать в Poliglotika",
-    "login": "Логин",
-    "register": "Регистрация",
-    "lessons": "Уроки",
-    "profile": "Профиль",
-    "choose_lang_for_ed": "Выберите язык для обучения"
+  "welcome": "Добро пожаловать в",
+  "mott": "mott",
+  "login": "Логин",
+  "register": "Регистрация",
+  "lessons": "Уроки",
+  "profile": "Профиль",
+  "choose_lang_for_ed": "Выберите язык для обучения",
+  "start_learning": "Начните изучать новый язык уже сегодня!"
 }
