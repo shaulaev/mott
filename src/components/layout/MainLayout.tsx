@@ -14,7 +14,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, position = 'center', 
   return (
     <div className={`p-2 flex flex-col min-h-screen text-white`}>
       <Head>
-        <title>My Language Learning App</title>
+        <title>Mott | Home</title>
         <meta
           name="description"
           content="A language learning app built with Next.js and Tailwind CSS"
