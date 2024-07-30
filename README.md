@@ -1,4 +1,4 @@
-# Welcome to Poliglotika!
+# Welcome to Mott!
 Web application to help people learn languages!
 
 ## Getting Started
