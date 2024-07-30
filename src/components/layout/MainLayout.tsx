@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import Navbar from '../common/Navbar'
+import Navbar from '../common/Header/Navbar'
 import Footer from "../common/Footer";
+import Header from '../common/Header/Header';
 
 interface MainLayoutProps {
     children: React.ReactNode,
@@ -22,7 +23,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, position = 'center', 
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {header && <Navbar />}
+      {header && <Header />}
 
       <main className={`flex flex-col flex-grow items-center justify-${position}`}>{children}</main>
 

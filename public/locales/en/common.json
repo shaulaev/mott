@@ -4,6 +4,8 @@
   "login": "Login",
   "register": "Registration",
   "lessons": "Lessons",
+  "tasks": "Tasks",
+  "raiting": "Raiting",
   "profile": "Profile",
   "choose_lang_for_ed": "Choose language for learning",
   "start_learning": "Start learning a new language today!"
