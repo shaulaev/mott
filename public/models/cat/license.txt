@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cat minimalistic voxel
+* source:	https://sketchfab.com/3d-models/cat-minimalistic-voxel-64534d9ade6b4be7861c1fa2ad67063c
+* author:	Katuwa_2002 (https://sketchfab.com/Katuwa_2002)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cat minimalistic voxel" (https://sketchfab.com/3d-models/cat-minimalistic-voxel-64534d9ade6b4be7861c1fa2ad67063c) by Katuwa_2002 (https://sketchfab.com/Katuwa_2002) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

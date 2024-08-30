@@ -2,11 +2,19 @@
   "welcome": "Welcome to",
   "mott": "mott",
   "login": "Login",
+  "your_login": "Your login",
+  "your_password": "Your password",
+  "forgot_password": "Forgot password?",
+  "no_account": "No account? {register}",
   "register": "Registration",
   "lessons": "Lessons",
   "tasks": "Tasks",
   "raiting": "Raiting",
   "profile": "Profile",
   "choose_lang_for_ed": "Choose language for learning",
-  "start_learning": "Start learning a new language today!"
+  "start_learning": "Start learning a new language today!",
+  "fast_free_effective": "Fast, free, effective!",
+  "fast_free_effective_desc": "Learning foreign languages with 'Mott'  becomes simple and engaging. Our platform offers innovative learning methods tailored to the needs of each user. Study anytime and anywhere, gaining access to a variety of materials and interactive exercises. Join a community of like-minded individuals and achieve your language goals without unnecessary costs. Start your journey to fluent communication in a new language today!",
+  "connect_with_world": "Connect with students from around the world!",
+  "connect_with_world_desc": "'Mott' gives you the chance to practice your language skills by connecting with students from different countries. Immerse yourself in cultural diversity, make new friends, and improve your abilities through real conversations."
 }

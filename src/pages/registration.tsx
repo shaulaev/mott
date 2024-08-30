@@ -1,15 +1,16 @@
-import React, {useState} from 'react'
-import MainLayout from '@/components/layout/MainLayout'
-import Input from '@/components/common/Input'
-import Form from '@/components/Form'
-import Button from '@/components/common/Button'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
+import React, { useState } from "react";
+import MainLayout from "@/components/layout/MainLayout";
+import Input from "@/components/common/Input";
+import Form from "@/components/Form";
+import Button from "@/components/common/Button";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
-const login = () => {
-  const [username, setUsername] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
-  const {t} = useTranslation()
+const registration: React.FC = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const {t} = useTranslation();
 
   return (
     <MainLayout header={false} footer={false} title={"Login"} position="center">
@@ -29,15 +30,15 @@ const login = () => {
         <Button classes="w-full">Вход</Button>
         <div>
           <Link className="block" href={"/forgot"}>
-            Забыли пароль?
+            {t("forgot_password")}
           </Link>
           <Link className="block" href={"/registration"}>
-            Нет аккаунта? Регистрация
+            {t("no_account")}
           </Link>
         </div>
       </Form>
     </MainLayout>
   );
-}
+};
 
-export default login
+export default registration;

@@ -1,21 +1,21 @@
 import React from 'react'
 import Head from 'next/head'
-import Navbar from '../common/Header/Navbar'
 import Footer from "../common/Footer";
 import Header from '../common/Header/Header';
 
 interface MainLayoutProps {
     children: React.ReactNode,
+    title: String,
     position: 'start' | 'center' | 'end';
     header?: Boolean,
     footer?: Boolean
 } 
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, position = 'center', header = true, footer = true }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'center', header = true, footer = true }) => {
   return (
     <div className={`p-2 flex flex-col min-h-screen text-white`}>
       <Head>
-        <title>Mott | Home</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="A language learning app built with Next.js and Tailwind CSS"
