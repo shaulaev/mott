@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Head from 'next/head'
-import Footer from "../common/Footer";
+import Footer from "../common/Footer/Footer";
 import Header from '../common/Header/Header';
+import { useTranslation } from 'react-i18next';
 
 interface MainLayoutProps {
     children: React.ReactNode,
@@ -12,8 +13,17 @@ interface MainLayoutProps {
 } 
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'center', header = true, footer = true }) => {
+  
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    let lang = localStorage.getItem("language") || "ru";
+    console.log(lang)
+    i18n.changeLanguage(lang);
+  }, []);
+
   return (
-    <div className={`p-2 flex flex-col min-h-screen text-white`}>
+    <div className={`flex flex-col min-h-screen text-white`}>
       <Head>
         <title>{title}</title>
         <meta

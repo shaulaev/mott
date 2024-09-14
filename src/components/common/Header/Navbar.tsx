@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     <nav>
       <ul className="flex gap-4">
         <li className="hover:text-rose-500 duration-200">
-          <Link href={"/learn"}>{t("lessons")}</Link>
+          <Link href={"/lessons"}>{t("lessons")}</Link>
         </li>
         <li className="hover:text-rose-500 duration-200">
           <Link href={"/tasks"}>{t("tasks")}</Link>

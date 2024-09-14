@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link';
 import Button from '../Button';
 import { useTranslation } from 'react-i18next';
+import { ChangeLanguage } from "./ChangeLanguage";
+import { languages } from "../../../../public/locales/languages";
 
 const Profile: React.FC = () => {
   const user = false;
@@ -9,7 +11,9 @@ const Profile: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <div className='flex items-center gap-4'>
+      <ChangeLanguage languages={languages} />
+
       {user ? (
         <Link href={"/profile"}>
           <div className="flex items-center">
@@ -26,7 +30,7 @@ const Profile: React.FC = () => {
           <Button>{t("login")}</Button>
         </Link>
       )}
-    </>
+    </div>
   );
 }
 

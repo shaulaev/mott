@@ -1,19 +1,14 @@
-'use client'
-
-import React, {useEffect} from "react";
+import React from "react";
 import Link from "next/link";
-import Navbar from "./Navbar";
-import Profile from "./Profile";
-import { useTranslation } from "react-i18next";
 
-const Header: React.FC = () => {
-
+const Footer: React.FC = () => {
   return (
-    <header className="p-2 w-[100%] flex items-center justify-between left-[50%] transform translate-x-[-50%] z-10 shadow-sm shadow-[#0a1014] fixed bg-[#141F25]">
-      <Link href={"/"}>
+    <footer className="w-[100%] container py-4 mx-auto">
+      <div className="flex items-center mb-2">
         <svg
-          width="45"
-          height="45"
+          className="inline-block"
+          width="35"
+          height="35"
           viewBox="0 0 45 47"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +20,11 @@ const Header: React.FC = () => {
             fill="#F43F5E"
           />
         </svg>
-      </Link>
-
-      <Navbar />
-
-      <Profile />
-    </header>
+        <span className="text-2xl">ott language learning application</span>
+      </div>
+      <span>Made by Shaulaev</span>
+    </footer>
   );
 };
 
-export default Header;
+export default Footer;

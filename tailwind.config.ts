@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         main: "#F43F5E",
+        mainGrey: "#141F25",
+        mainGreyer: "#0a1014",
       },
     },
   },
