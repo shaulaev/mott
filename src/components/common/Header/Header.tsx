@@ -1,10 +1,9 @@
 'use client'
 
-import React, {useEffect} from "react";
+import React from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
-import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
 

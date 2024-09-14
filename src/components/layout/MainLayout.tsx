@@ -18,7 +18,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'ce
 
   useEffect(() => {
     let lang = localStorage.getItem("language") || "ru";
-    console.log(lang)
     i18n.changeLanguage(lang);
   }, []);
 

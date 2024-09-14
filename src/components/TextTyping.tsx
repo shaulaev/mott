@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useState, useEffect} from 'react'
 
 interface props {
@@ -26,4 +28,6 @@ const TextTyping: React.FC<props> = ({text, delay}) => {
     )
 }
 
-export default TextTyping
+const MemoizedTextTyping = React.memo(TextTyping)
+
+export default MemoizedTextTyping;

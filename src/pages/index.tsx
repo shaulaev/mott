@@ -5,19 +5,7 @@ import TextTyping from "@/components/TextTyping";
 import Section from "@/components/homepage/Section/Section";
 
 export default function Home() {
-  const { t, i18n } = useTranslation();
-
-  const textProps = {
-    title: <>
-              <TextTyping text={t("welcome")} delay={125} />
-              <span className="capitalize text-rose-500">
-                {" " + t("mott")}
-              </span>
-            </>,
-    titleClasses: "text-5xl font-bold text-center",
-    description: t("start_learning"),
-    descriptionClasses: "mt-4 text-2xl text-gray-300 text-center"
-  }
+  const { t } = useTranslation();
 
   return (
     <MainLayout title={"Home"} position={"start"}>
