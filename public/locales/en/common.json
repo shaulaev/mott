@@ -1,4 +1,6 @@
 {
+  "en": "English",
+  "ru": "Russian",
   "welcome": "Welcome to",
   "mott": "mott",
   "login": "Login",
@@ -6,7 +8,9 @@
   "your_password": "Your password",
   "forgot_password": "Forgot password?",
   "no_account": "No account? {register}",
-  "register": "Registration",
+  "have_account": "Already have account? Log in!",
+  "registration": "Registration",
+  "submit": "Submit",
   "lessons": "Lessons",
   "tasks": "Tasks",
   "raiting": "Raiting",

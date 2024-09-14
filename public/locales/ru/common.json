@@ -1,4 +1,6 @@
 {
+  "en": "Английский",
+  "ru": "Русский",
   "welcome": "Добро пожаловать в",
   "mott": "mott",
   "login": "Вход",
@@ -6,7 +8,9 @@
   "your_password": "Ваш пароль",
   "forgot_password": "Забыли пароль?",
   "no_account": "Нет аккаунта? {register}",
-  "register": "Регистрация",
+  "have_account": "Есть аккаунт? Авторизуйтесь!",
+  "registration": "Регистрация",
+  "submit": "Принять",
   "lessons": "Уроки",
   "tasks": "Задачи",
   "raiting": "Рейтинг",

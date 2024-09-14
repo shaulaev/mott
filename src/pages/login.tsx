@@ -26,13 +26,13 @@ const login = () => {
           value={password}
           setValue={setPassword}
         />
-        <Button classes="w-full">Вход</Button>
+        <Button classes="w-full">{t("submit")}</Button>
         <div>
           <Link className="block" href={"/forgot"}>
-            Забыли пароль?
+            {t("forgot_password")}
           </Link>
           <Link className="block" href={"/registration"}>
-            Нет аккаунта? Регистрация
+            {t("no_account")}
           </Link>
         </div>
       </Form>

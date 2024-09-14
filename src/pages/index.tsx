@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Cat } from "@/components/threejs/Cat";
 import TextTyping from "@/components/TextTyping";
 import Section from "@/components/homepage/Section/Section";
+import { languages } from "../../public/locales/languages";
+import { language } from "@/types/languages";
+import Link from "next/link";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -29,6 +32,31 @@ export default function Home() {
             animationLink: "",
           }}
         />
+
+        <section className="choose_language pt-[50px] pb-[50px] h-[300px] w-[100%]">
+          <h1 className="text-4xl mb-[40px] text-center">
+            {t("choose_lang_for_ed")}
+          </h1>
+
+          <div className="languages flex justify-center items-center">
+            {languages.map((l: language) => {
+              return (
+                <Link
+                  href={`/lessons/${l.code}`}
+                  className="cursor-pointer"
+                  key={l.code}
+                >
+                  <img
+                    className="hover:scale-125 transition duration-[.3s] w-[200px] h-[100px]"
+                    src={l.icon}
+                    alt=""
+                  />
+                  <p className="text-center">{t(l.code)}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
 
         <Section
           rowReverse={true}

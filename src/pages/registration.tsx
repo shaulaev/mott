@@ -14,7 +14,7 @@ const registration: React.FC = () => {
 
   return (
     <MainLayout header={false} footer={false} title={"Login"} position="center">
-      <Form title={t("login")}>
+      <Form title={t("registration")}>
         <Input
           name="username"
           label={t("your_login")}
@@ -27,13 +27,13 @@ const registration: React.FC = () => {
           value={password}
           setValue={setPassword}
         />
-        <Button classes="w-full">Вход</Button>
+        <Button classes="w-full">{t('submit')}</Button>
         <div>
           <Link className="block" href={"/forgot"}>
             {t("forgot_password")}
           </Link>
-          <Link className="block" href={"/registration"}>
-            {t("no_account")}
+          <Link className="block" href={"/login"}>
+            {t("have_account")}
           </Link>
         </div>
       </Form>
