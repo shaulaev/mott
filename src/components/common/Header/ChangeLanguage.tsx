@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { language } from '@/types/languages'
-import { useRouter } from 'next/router';
-import React, {useEffect, useState} from 'react'
+import { language } from "@/types/languages";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 type props = {
-    languages: language[]
-}
+  languages: language[];
+};
 
-export const ChangeLanguage: React.FC<props> = ({languages}) => {
+export const ChangeLanguage: React.FC<props> = ({ languages }) => {
   const [dropdown, setDropdown] = useState<boolean>(false);
   const [curLang, setCurLang] = useState<language>(languages[0]);
-  const {i18n} = useTranslation();
-  
+  const { i18n } = useTranslation();
+
   const router = useRouter();
 
   const handleDropdown = () => {
@@ -21,17 +21,19 @@ export const ChangeLanguage: React.FC<props> = ({languages}) => {
   };
 
   const handleLanguage = (code: string) => {
-    localStorage.setItem('language', code)
-    i18n.changeLanguage(code)
+    localStorage.setItem("language", code);
+    i18n.changeLanguage(code);
     handleDropdown();
-    router.reload()
-  }
+    router.reload();
+  };
 
   useEffect(() => {
     setCurLang(
       languages.filter((l) => l.code === localStorage.getItem("language"))[0]
     );
-  }, [])
+  }, []);
+
+  console.log(curLang);
 
   return (
     <div className="dropdown">

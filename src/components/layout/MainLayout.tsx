@@ -1,19 +1,24 @@
-import React, {useEffect} from 'react'
-import Head from 'next/head'
+import React, { useEffect } from "react";
+import Head from "next/head";
 import Footer from "../common/Footer/Footer";
-import Header from '../common/Header/Header';
-import { useTranslation } from 'react-i18next';
+import Header from "../common/Header/Header";
+import { useTranslation } from "react-i18next";
 
 interface MainLayoutProps {
-    children: React.ReactNode,
-    title: String,
-    position: 'start' | 'center' | 'end';
-    header?: Boolean,
-    footer?: Boolean
-} 
+  children: React.ReactNode;
+  title: String;
+  position: "start" | "center" | "end";
+  header?: Boolean;
+  footer?: Boolean;
+}
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'center', header = true, footer = true }) => {
-  
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title,
+  position = "center",
+  header = true,
+  footer = true,
+}) => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -34,11 +39,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'ce
 
       {header && <Header />}
 
-      <main className={`flex flex-col flex-grow items-center justify-${position}`}>{children}</main>
+      <main
+        className={`flex flex-col flex-grow items-center justify-${position}`}
+      >
+        {children}
+      </main>
 
       {footer && <Footer />}
     </div>
   );
-}
+};
 
-export default MainLayout
+export default MainLayout;
