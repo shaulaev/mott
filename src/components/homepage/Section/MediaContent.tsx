@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import ThreeWrapper from "@/components/threejs/ThreeWrapper";
 
@@ -8,13 +8,21 @@ interface Props {
 }
 
 export const MediaContent: React.FC<Props> = props => {
-
-    const {threeJSModel, animationLink} = props
+    const {threeJSModel, animationLink} = props;
+    const [grab, setGrab] = useState(false);
+    const grabStyle = grab ? "cursor-grabbing" : "cursor-grab"
 
     return (
       <>
         {threeJSModel ? (
-          <div className="my-8 md:mx-0 mx-auto w-1/2 md:w-1/3 h-[200px] sm:h-[350px]">
+          <div
+            onMouseDown={() => setGrab(true)}
+            onMouseUp={() => setGrab(false)}
+            className={
+              "my-8 md:mx-0 mx-auto w-1/2 md:w-1/3 h-[200px] sm:h-[350px] " +
+              grabStyle
+            }
+          >
             <ThreeWrapper
               orbit={{
                 autoRotate: true,

@@ -9,10 +9,10 @@ interface MainLayoutProps {
     title: String,
     position: 'start' | 'center' | 'end';
     header?: Boolean,
-    footer?: Boolean
+    footer?: Boolean,
 } 
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'center', header = true, footer = true }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'center', header = true, footer = true, ...props }) => {
   
   const { i18n } = useTranslation();
 
@@ -22,7 +22,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, position = 'ce
   }, []);
 
   return (
-    <div className={`flex flex-col min-h-screen text-white`}>
+    <div {...props} className={`flex flex-col min-h-screen text-white`}>
       <Head>
         <title>{title}</title>
         <meta

@@ -14,24 +14,30 @@ export const ChangeLanguage: React.FC<props> = ({languages}) => {
   const [curLang, setCurLang] = useState<language>(languages[0]);
   const {i18n} = useTranslation();
   
-  const router = useRouter();
-
   const handleDropdown = () => {
     setDropdown(!dropdown);
   };
 
   const handleLanguage = (code: string) => {
     localStorage.setItem('language', code)
+    const newLang = languages.find((l) => {
+      if (l.code === code) {
+        return l;
+      }
+    });
     i18n.changeLanguage(code)
+    setCurLang(newLang ?? languages[0]);
     handleDropdown();
-    router.reload()
+    // router.reload()
   }
 
   useEffect(() => {
     setCurLang(
-      languages.filter((l) => l.code === localStorage.getItem("language"))[0]
+      languages.filter((l) => l.code === localStorage.getItem("language"))[0] ?? languages[0]
     );
-  }, [])
+  }, [curLang, languages])
+
+  console.log(curLang)
 
   return (
     <div className="dropdown">

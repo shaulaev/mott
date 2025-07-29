@@ -6,7 +6,7 @@ import Button from '@/components/common/Button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
-const login = () => {
+const Login = () => {
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const {t} = useTranslation()
@@ -40,4 +40,4 @@ const login = () => {
   );
 }
 
-export default login
+export default Login;

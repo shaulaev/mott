@@ -6,7 +6,7 @@ import Button from "@/components/common/Button";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-const registration: React.FC = () => {
+const Registration: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -41,4 +41,4 @@ const registration: React.FC = () => {
   );
 };
 
-export default registration;
+export default Registration;
